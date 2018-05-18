@@ -18,13 +18,13 @@
            <!--<version>0.0.1-SNAPSHOT</version>-->
        <!--</dependency>-->
 
-       <dependency>
-           <groupId>${project.groupId}</groupId>
-           <artifactId>domain</artifactId>
-       </dependency>
-       <dependency>
-           <groupId>${project.groupId}</groupId>
-           <artifactId>biz</artifactId>
-       </dependency>
+       <!--<dependency>-->
+           <!--<groupId>${project.groupId}</groupId>-->
+           <!--<artifactId>domain</artifactId>-->
+       <!--</dependency>-->
+       <!--<dependency>-->
+           <!--<groupId>${project.groupId}</groupId>-->
+           <!--<artifactId>biz</artifactId>-->
+       <!--</dependency>-->
    </dependencies>
 </project>
