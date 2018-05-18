@@ -23,6 +23,7 @@
     <result column="is_system" jdbcType="BIT" property="isSystem" />
     <result column="head_url" jdbcType="VARCHAR" property="headUrl" />
   </resultMap>
+
   <insert id="insert" parameterType="com.wang.learn.domain.oms.User">
     <!--
       WARNING - @mbggenerated
@@ -41,6 +42,10 @@
       #{email,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{isSystem,jdbcType=BIT}, 
       #{headUrl,jdbcType=VARCHAR})
   </insert>
+
+  <select id="selectAllUser" resultMap="BaseResultMap">
+    SELECT * FROM oms_user
+  </select>
   <insert id="insertSelective" parameterType="com.wang.learn.domain.oms.User">
     <!--
       WARNING - @mbggenerated

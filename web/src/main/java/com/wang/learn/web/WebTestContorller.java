@@ -1,7 +1,9 @@
 package com.wang.learn.web;
 
 
+import com.wang.learn.biz.MallAppService;
 import com.wang.learn.biz.UserService;
+import com.wang.learn.domain.admin.MallApp;
 import com.wang.learn.domain.oms.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,8 @@ import java.util.List;
 public class WebTestContorller {
     @Autowired
     private UserService userService;
+    @Autowired
+    private MallAppService mallAppService;
 
     @RequestMapping("/")
     public String greeting() {
@@ -34,6 +38,12 @@ public class WebTestContorller {
     @RequestMapping("/list")
     public String listUser() {
         List<User> users=userService.findAllUser(1,5);
+        return null;
+    }
+
+    @RequestMapping("/mallList")
+    public String listMall() {
+        List<MallApp> malls=mallAppService.find(1,5);
         return null;
     }
 }

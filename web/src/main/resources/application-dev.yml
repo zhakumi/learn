@@ -22,7 +22,7 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
-    admin:
+      admin:
         driver-class-name: com.mysql.jdbc.Driver
         type: com.alibaba.druid.pool.DruidDataSource
         name: test
@@ -44,9 +44,9 @@ spring:
         maxOpenPreparedStatements: 20
 
 mybatis:
-   oms:
-      mapper-locations: classpath:config/mybatis-config.xml
-      type-aliases-package: com.wangcan.domain
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.wangcan.domain
+
 #pagehelper分页插件
 pagehelper:
     helperDialect: mysql
